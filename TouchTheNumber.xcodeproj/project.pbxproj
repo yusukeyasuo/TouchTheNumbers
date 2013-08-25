@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702D3BAA17C9EA87003185BC /* EasyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D3BA917C9EA87003185BC /* EasyViewController.m */; };
+		702D3BAD17C9EA93003185BC /* HardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702D3BAC17C9EA93003185BC /* HardViewController.m */; };
 		70BEA5EB17A3544B000E420C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BEA5EA17A3544B000E420C /* UIKit.framework */; };
 		70BEA5ED17A3544B000E420C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BEA5EC17A3544B000E420C /* Foundation.framework */; };
 		70BEA5EF17A3544B000E420C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BEA5EE17A3544B000E420C /* CoreGraphics.framework */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		702D3BA817C9EA87003185BC /* EasyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyViewController.h; sourceTree = "<group>"; };
+		702D3BA917C9EA87003185BC /* EasyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyViewController.m; sourceTree = "<group>"; };
+		702D3BAB17C9EA93003185BC /* HardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardViewController.h; sourceTree = "<group>"; };
+		702D3BAC17C9EA93003185BC /* HardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardViewController.m; sourceTree = "<group>"; };
 		70BEA5E717A3544B000E420C /* TouchTheNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchTheNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BEA5EA17A3544B000E420C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		70BEA5EC17A3544B000E420C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +99,10 @@
 				70BEA60A17A355DB000E420C /* TitleController.m */,
 				70BEA60C17A355E5000E420C /* GameViewController.h */,
 				70BEA60D17A355E5000E420C /* GameViewController.m */,
+				702D3BA817C9EA87003185BC /* EasyViewController.h */,
+				702D3BA917C9EA87003185BC /* EasyViewController.m */,
+				702D3BAB17C9EA93003185BC /* HardViewController.h */,
+				702D3BAC17C9EA93003185BC /* HardViewController.m */,
 				70BEA5F117A3544B000E420C /* Supporting Files */,
 			);
 			path = TouchTheNumber;
@@ -182,6 +192,8 @@
 				70BEA5FB17A3544B000E420C /* AppDelegate.m in Sources */,
 				70BEA60B17A355DC000E420C /* TitleController.m in Sources */,
 				70BEA60E17A355E5000E420C /* GameViewController.m in Sources */,
+				702D3BAA17C9EA87003185BC /* EasyViewController.m in Sources */,
+				702D3BAD17C9EA93003185BC /* HardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

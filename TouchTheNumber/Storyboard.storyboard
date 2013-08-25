@@ -42,7 +42,7 @@
                                     <constraint firstAttribute="height" constant="44" id="zVV-pl-WVN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="Start">
+                                <state key="normal" title="Nomal">
                                     <color key="titleColor" red="0.9119100765" green="0.88902098029999999" blue="0.01560809283" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -51,6 +51,39 @@
                                 </state>
                                 <connections>
                                     <segue destination="7dw-AD-QmE" kind="push" id="cps-wi-YIP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHy-S5-gng">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IFU-Gq-Fs0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Hard">
+                                    <color key="titleColor" red="0.9119100765" green="0.88902098029999999" blue="0.01560809283" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pFW-Xz-yxZ" kind="push" id="Tce-KQ-iJG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qrw-Co-z1Y">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="7lu-Cc-lkD"/>
+                                    <constraint firstAttribute="height" constant="44" id="88C-G9-M5r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleColor" red="0.9119100765" green="0.88902098029999999" blue="0.01560809283" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="971-61-0e7" kind="push" id="YGg-j9-ZOB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="前回タイム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awo-sa-C39">
@@ -70,13 +103,18 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="16H-Q3-itX" firstAttribute="centerX" secondItem="Awo-sa-C39" secondAttribute="centerX" type="default" id="76a-60-px1"/>
+                            <constraint firstAttribute="bottom" secondItem="hHy-S5-gng" secondAttribute="bottom" constant="184" id="BFf-Kl-1V9"/>
+                            <constraint firstItem="hHy-S5-gng" firstAttribute="leading" secondItem="Qrw-Co-z1Y" secondAttribute="leading" type="default" id="ELf-Z8-4mF"/>
+                            <constraint firstItem="NYY-nQ-f2T" firstAttribute="centerX" secondItem="yv5-hh-BN2" secondAttribute="centerX" type="default" id="LbS-UZ-gCT"/>
                             <constraint firstItem="yv5-hh-BN2" firstAttribute="top" secondItem="Haq-Fy-vWM" secondAttribute="top" constant="260" id="QS3-DM-gku"/>
-                            <constraint firstAttribute="bottom" secondItem="16H-Q3-itX" secondAttribute="bottom" constant="144" id="Zgi-8B-xHI"/>
-                            <constraint firstItem="yv5-hh-BN2" firstAttribute="centerX" secondItem="Haq-Fy-vWM" secondAttribute="centerX" type="default" id="akX-44-NyB"/>
+                            <constraint firstItem="NYY-nQ-f2T" firstAttribute="top" secondItem="Haq-Fy-vWM" secondAttribute="top" constant="83" id="XXm-7e-JtR"/>
+                            <constraint firstAttribute="bottom" secondItem="16H-Q3-itX" secondAttribute="bottom" constant="98" id="aMm-Ht-A7L"/>
+                            <constraint firstItem="hHy-S5-gng" firstAttribute="trailing" secondItem="16H-Q3-itX" secondAttribute="trailing" type="default" id="dkA-xf-J8S"/>
                             <constraint firstItem="16H-Q3-itX" firstAttribute="top" secondItem="Awo-sa-C39" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fka-Vg-Nut"/>
-                            <constraint firstItem="yv5-hh-BN2" firstAttribute="centerX" secondItem="NYY-nQ-f2T" secondAttribute="centerX" type="default" id="hab-gN-o47"/>
+                            <constraint firstItem="hHy-S5-gng" firstAttribute="trailing" secondItem="Qrw-Co-z1Y" secondAttribute="trailing" type="default" id="hAP-Nj-4DJ"/>
                             <constraint firstItem="yv5-hh-BN2" firstAttribute="centerX" secondItem="Awo-sa-C39" secondAttribute="centerX" type="default" id="ibK-v4-2W4"/>
-                            <constraint firstItem="NYY-nQ-f2T" firstAttribute="top" secondItem="Haq-Fy-vWM" secondAttribute="top" constant="150" id="uum-c6-Rfn"/>
+                            <constraint firstItem="Qrw-Co-z1Y" firstAttribute="top" secondItem="Haq-Fy-vWM" secondAttribute="top" constant="200" id="vsz-Sf-Ort"/>
+                            <constraint firstItem="NYY-nQ-f2T" firstAttribute="centerX" secondItem="Haq-Fy-vWM" secondAttribute="centerX" type="default" id="y3o-Dn-laZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sGO-Dq-sQc"/>
@@ -160,8 +198,41 @@
             </objects>
             <point key="canvasLocation" x="818" y="69"/>
         </scene>
+        <!--Easy View Controller-->
+        <scene sceneID="fk2-UX-ODM">
+            <objects>
+                <viewController id="971-61-0e7" customClass="EasyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UvE-mI-xM5">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ezx-ol-5Eo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YbN-jd-8KZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="-601"/>
+        </scene>
+        <!--Hard View Controller-->
+        <scene sceneID="ebs-iJ-TOt">
+            <objects>
+                <viewController id="pFW-Xz-yxZ" customClass="HardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MUV-Rj-hvw">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KTY-A5-GqA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dJ-cz-Rvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="747"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="EasyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EasyViewController.h"/>
+        </class>
         <class className="GameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
             <relationships>
@@ -169,6 +240,9 @@
                 <relationship kind="outlet" name="_nextNumLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="_timerLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="HardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HardViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
