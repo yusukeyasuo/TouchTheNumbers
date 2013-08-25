@@ -3,7 +3,7 @@
 //  TouchTheNumber
 //
 //  Created by yusuke_yasuo on 2013/07/27.
-//  Copyright (c) 2013年 yusuke_yasuo. All rights reserved.
+//  Copyright (c) 2013年 kazuki_ijima. All rights reserved.
 //
 
 #import "TitleController.h"
