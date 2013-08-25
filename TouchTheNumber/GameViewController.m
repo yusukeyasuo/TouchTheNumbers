@@ -6,6 +6,8 @@
 //  Copyright (c) 2013年 yusuke_yasuo. All rights reserved.
 //
 
+//井島は甲本ヒロト
+
 #import "GameViewController.h"
 
 @interface GameViewController ()
