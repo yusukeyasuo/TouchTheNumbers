@@ -36,4 +36,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backToTitle:(id)sender
+{
+    [_timer invalidate];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end
