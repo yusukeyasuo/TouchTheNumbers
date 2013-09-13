@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EasyViewController : UIViewController
+{
+    NSTimer             *_timer;
+}
 
 @end
