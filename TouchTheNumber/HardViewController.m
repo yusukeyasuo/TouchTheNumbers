@@ -43,12 +43,12 @@
 	hitUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"hit" ofType:@"wav"]];
 	
 	// sound
-//	AudioServicesCreateSystemSoundID((__bridge CFURLRef)hitUrl, &hitBtnId);
+	AudioServicesCreateSystemSoundID((__bridge CFURLRef)hitUrl, &hitBtnId);
 	
 	missUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"miss" ofType:@"wav"]];
 
 	// sound
-//	AudioServicesCreateSystemSoundID((__bridge CFURLRef)missUrl, &missBtnId);
+	AudioServicesCreateSystemSoundID((__bridge CFURLRef)missUrl, &missBtnId);
 	
 	
 	if (!_timerLabel) {
@@ -150,7 +150,7 @@
 -(IBAction)backToTitle:(UIButton *)sender {
 	
 	// sound
-//	AudioServicesPlaySystemSound(missBtnId);
+	AudioServicesPlaySystemSound(missBtnId);
 	if ([_timer isValid]) {
 		[_timer invalidate];
 	}
@@ -388,7 +388,7 @@
 	
     if (btn.tag == _nextNum) {
 		// sound
-//		AudioServicesPlaySystemSound(hitBtnId);
+		AudioServicesPlaySystemSound(hitBtnId);
 		
         [self btnRotation:btn];
 		//        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -411,7 +411,7 @@
 -(void) missPenalty {
 	if (_nextNum > 1) {
 		// sound
-//		AudioServicesPlaySystemSound(missBtnId);
+		AudioServicesPlaySystemSound(missBtnId);
 		
 		_progressDate = [NSDate date];
 		

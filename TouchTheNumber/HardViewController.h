@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 // sound
-//#import <AudioToolbox/AudioToolbox.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface HardViewController : UIViewController {
     UILabel *_timerLabel;
@@ -31,8 +31,8 @@
 	UIProgressView *_progressView;
 	
 	// sound
-//	SystemSoundID hitBtnId;
-//	SystemSoundID missBtnId;
+	SystemSoundID hitBtnId;
+	SystemSoundID missBtnId;
 	NSURL *hitUrl;
 	NSURL *missUrl;
 }
