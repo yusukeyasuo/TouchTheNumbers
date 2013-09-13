@@ -32,8 +32,8 @@
 	printf("僕の担当で〜す\n");
 	printf("Vamos!! 俺たちの枝にゃん\n");
 	
-// iOS7だと動きがおかしいっぽい
-// (nextNoをタップしてもミスになる)
+	// iOS7だと動きがおかしいっぽい
+	// (nextNoをタップしてもミスになる)
 	
 	_nextNum = 1;
 	_disturbCnt = 0;
@@ -41,10 +41,14 @@
 	//	_disturbImage = [UIImage imageNamed:@"star.PNG"];
 	
 	hitUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"hit" ofType:@"wav"]];
-	AudioServicesCreateSystemSoundID((__bridge CFURLRef)hitUrl, &hitBtnId);
+	
+	// sound
+//	AudioServicesCreateSystemSoundID((__bridge CFURLRef)hitUrl, &hitBtnId);
 	
 	missUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"miss" ofType:@"wav"]];
-	AudioServicesCreateSystemSoundID((__bridge CFURLRef)missUrl, &missBtnId);
+
+	// sound
+//	AudioServicesCreateSystemSoundID((__bridge CFURLRef)missUrl, &missBtnId);
 	
 	
 	if (!_timerLabel) {
@@ -144,7 +148,9 @@
 }
 
 -(IBAction)backToTitle:(UIButton *)sender {
-	AudioServicesPlaySystemSound(missBtnId);
+	
+	// sound
+//	AudioServicesPlaySystemSound(missBtnId);
 	if ([_timer isValid]) {
 		[_timer invalidate];
 	}
@@ -187,10 +193,10 @@
         NSArray *ary = [self getRandBtnIndexes];
         [self moveFrom:[ary[0] intValue] to:[ary[1] intValue]];
     }
-
+	
 	// 拡大・回転
     [self btnRotation:([_btnContainerAry objectAtIndex:rand() % _btnContainerAry.count])];
-
+	
 	// view移動
 	//	NSLog(@"%f", cos(M_PI * (double)(_disturbCnt % 8) / 8));
 	//
@@ -284,57 +290,57 @@
 - (void)moveFrom:(NSInteger)fromIndex to:(NSInteger)toIndex {
     CGRect toFrame = [[_btnContainerAry objectAtIndex:toIndex] frame];
     CGRect fromFrame = [[_btnContainerAry objectAtIndex:fromIndex] frame];
-/*
-	CGRect toFrameVib;
-	CGRect fromFrameVib;
-	
-    float elapsedTime = 0;
-	float vibTime = 0.3;
-	float vibWidth = 30;
-	
-//	for (int repeatCnt = 0; repeatCnt < 3; repeatCnt++) {
-		[UIView beginAnimations:nil context:nil];
-		[UIView setAnimationDuration:vibTime];
-		[UIView setAnimationDelay:elapsedTime];
-		[UIView setAnimationCurve:UIViewAnimationCurveLinear];
-		toFrameVib = toFrame;
-		fromFrameVib = fromFrame;
-		toFrameVib.origin.x = toFrameVib.origin.x - vibWidth;
-		fromFrameVib.origin.x = fromFrameVib.origin.x - vibWidth;
-		[[_btnContainerAry objectAtIndex:fromIndex] setFrame:fromFrameVib];
-		[[_btnContainerAry objectAtIndex:toIndex] setFrame:toFrameVib];
-		[UIView commitAnimations];
-		elapsedTime = elapsedTime + vibTime;
-		
-		[UIView beginAnimations:nil context:nil];
-		[UIView setAnimationDuration:vibTime];
-		[UIView setAnimationDelay:elapsedTime];
-		[UIView setAnimationCurve:UIViewAnimationCurveLinear];
-		toFrameVib = toFrame;
-		fromFrameVib = fromFrame;
-		toFrameVib.origin.x = toFrameVib.origin.x + vibWidth;
-		fromFrameVib.origin.x = fromFrameVib.origin.x + vibWidth;
-		[[_btnContainerAry objectAtIndex:fromIndex] setFrame:fromFrameVib];
-		[[_btnContainerAry objectAtIndex:toIndex] setFrame:toFrameVib];
-		[UIView commitAnimations];
-		elapsedTime = elapsedTime + vibTime;
-		
-		[UIView beginAnimations:nil context:nil];
-		[UIView setAnimationDuration:vibTime];
-		[UIView setAnimationDelay:elapsedTime];
-		[UIView setAnimationCurve:UIViewAnimationCurveLinear];
-		toFrameVib = toFrame;
-		fromFrameVib = fromFrame;
-		[[_btnContainerAry objectAtIndex:fromIndex] setFrame:fromFrameVib];
-		[[_btnContainerAry objectAtIndex:toIndex] setFrame:toFrameVib];
-		[UIView commitAnimations];
-		elapsedTime = elapsedTime + vibTime;
-//	}
-*/
+	/*
+	 CGRect toFrameVib;
+	 CGRect fromFrameVib;
+	 
+	 float elapsedTime = 0;
+	 float vibTime = 0.3;
+	 float vibWidth = 30;
+	 
+	 //	for (int repeatCnt = 0; repeatCnt < 3; repeatCnt++) {
+	 [UIView beginAnimations:nil context:nil];
+	 [UIView setAnimationDuration:vibTime];
+	 [UIView setAnimationDelay:elapsedTime];
+	 [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+	 toFrameVib = toFrame;
+	 fromFrameVib = fromFrame;
+	 toFrameVib.origin.x = toFrameVib.origin.x - vibWidth;
+	 fromFrameVib.origin.x = fromFrameVib.origin.x - vibWidth;
+	 [[_btnContainerAry objectAtIndex:fromIndex] setFrame:fromFrameVib];
+	 [[_btnContainerAry objectAtIndex:toIndex] setFrame:toFrameVib];
+	 [UIView commitAnimations];
+	 elapsedTime = elapsedTime + vibTime;
+	 
+	 [UIView beginAnimations:nil context:nil];
+	 [UIView setAnimationDuration:vibTime];
+	 [UIView setAnimationDelay:elapsedTime];
+	 [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+	 toFrameVib = toFrame;
+	 fromFrameVib = fromFrame;
+	 toFrameVib.origin.x = toFrameVib.origin.x + vibWidth;
+	 fromFrameVib.origin.x = fromFrameVib.origin.x + vibWidth;
+	 [[_btnContainerAry objectAtIndex:fromIndex] setFrame:fromFrameVib];
+	 [[_btnContainerAry objectAtIndex:toIndex] setFrame:toFrameVib];
+	 [UIView commitAnimations];
+	 elapsedTime = elapsedTime + vibTime;
+	 
+	 [UIView beginAnimations:nil context:nil];
+	 [UIView setAnimationDuration:vibTime];
+	 [UIView setAnimationDelay:elapsedTime];
+	 [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+	 toFrameVib = toFrame;
+	 fromFrameVib = fromFrame;
+	 [[_btnContainerAry objectAtIndex:fromIndex] setFrame:fromFrameVib];
+	 [[_btnContainerAry objectAtIndex:toIndex] setFrame:toFrameVib];
+	 [UIView commitAnimations];
+	 elapsedTime = elapsedTime + vibTime;
+	 //	}
+	 */
 	
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3f];
-//	[UIView setAnimationDelay:elapsedTime];
+	//	[UIView setAnimationDelay:elapsedTime];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
     [[_btnContainerAry objectAtIndex:fromIndex] setFrame:toFrame];
     [[_btnContainerAry objectAtIndex:toIndex] setFrame:fromFrame];
@@ -374,17 +380,18 @@
 }
 
 -(IBAction) touchedBtn:(UIButton *) sender {
-
+	
     UIButton *btn = sender;
 	_progressDate = [NSDate date];
-
+	
 	NSLog(@"tag %d : nextNum %d", sender.tag, _nextNum);
-
+	
     if (btn.tag == _nextNum) {
-		AudioServicesPlaySystemSound(hitBtnId);
-
+		// sound
+//		AudioServicesPlaySystemSound(hitBtnId);
+		
         [self btnRotation:btn];
-//        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+		//        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 		[btn setAlpha:0.4];
 		
         _nextNum++;
@@ -403,18 +410,19 @@
 
 -(void) missPenalty {
 	if (_nextNum > 1) {
-		AudioServicesPlaySystemSound(missBtnId);
-
+		// sound
+//		AudioServicesPlaySystemSound(missBtnId);
+		
 		_progressDate = [NSDate date];
-
+		
 		_nextNum--;
 		_nextNumLabel.text = [NSString stringWithFormat:@"%d", _nextNum];
-
+		
 		for (int btnCnt = 0; btnCnt < 25; btnCnt++) {
 			if ([[_btnContainerAry objectAtIndex:btnCnt] tag] == _nextNum) {
-//				[[_btnContainerAry objectAtIndex:btnCnt] setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
+				//				[[_btnContainerAry objectAtIndex:btnCnt] setTitleColor:[UIColor cyanColor] forState:UIControlStateNormal];
 				[[_btnContainerAry objectAtIndex:btnCnt] setAlpha:1];
-
+				
 			}
 		}
 	}
