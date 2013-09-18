@@ -8,18 +8,33 @@
 
 #import <UIKit/UIKit.h>
 
+// sound
+#import <AudioToolbox/AudioToolbox.h>
+
 @interface HardViewController : UIViewController {
     UILabel *_timerLabel;
 	UILabel *_nextNumLabel;
+	
+	//	UIView *_btnView;
     
     NSMutableArray      *_btnContainerAry;
     NSInteger           _nextNum;
     NSTimer             *_timer;
-    BOOL                _timeFlg;
+	//    BOOL                _timeFlg;
     NSDate              *_stDate;
     NSTimer             *_moveTimer;
     int					_disturbCnt;
-
+	
+	//	UIImage *_disturbImage;
+	
+	NSDate *_progressDate;
+	UIProgressView *_progressView;
+	
+	// sound
+	SystemSoundID hitBtnId;
+	SystemSoundID missBtnId;
+	NSURL *hitUrl;
+	NSURL *missUrl;
 }
 
 -(IBAction) backToTitle:(UIButton *)sender;
@@ -32,5 +47,6 @@
 -(void)moveFrom:(NSInteger)fromIndex to:(NSInteger)toIndex;
 -(IBAction) touchedBtn:(UIButton *) sender;
 -(void)btnRotation:(UIButton *)button;
+-(void) missPenalty;
 
 @end
