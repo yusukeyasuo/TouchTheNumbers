@@ -10,7 +10,15 @@
 
 @interface EasyViewController : UIViewController
 {
+    IBOutlet UILabel    *_timerLabel;
+    IBOutlet UILabel    *_nextNumLabel;
+    
     NSTimer             *_timer;
+    NSInteger           _nextNum;
+    NSMutableArray      *_btnAry;
+    NSMutableArray      *_btnContainerAry;
+    NSDate              *_stdate;
+    NSDate              *_now;
 }
 
 @end
